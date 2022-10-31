@@ -1,0 +1,35 @@
+{
+    "build": {
+        "context": "..", 
+        "dockerfile": "Dockerfile" },  
+    "customizations": {
+      "vscode": {
+        "settings": { 
+				"python.defaultInterpreterPath": "/home/vscode/.conda/envs/test-env/",
+        "terminal.activateEnvironment": true
+			},
+      "extensions": [
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "GitHub.vscode-pull-request-github",
+        "Hridoy.r-development",
+        "Kamen.noctis-high-contrast",
+        "mhutchie.git-graph",
+        "ms-python.gather",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "RDebugger.r-debugger",
+        "REditorSupport.r"
+      ]
+      }
+    },
+  
+    "forwardPorts": [3000, 8888],
+    "remoteUser": "vscode"
+  }
+  
