@@ -6,7 +6,8 @@ FROM docker.io/condaforge/mambaforge:latest
 RUN ln -snf /usr/share/zoneinfo/$(curl https://ipapi.co/timezone) /etc/localtime
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends build-essential && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -qq tzdata && \
+    apt-get install -y --no-install-recommends build-essential cmake zsh fish gnupg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
