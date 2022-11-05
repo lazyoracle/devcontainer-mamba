@@ -3,6 +3,8 @@ FROM docker.io/condaforge/mambaforge:latest
 # FROM --platform=linux/amd64 docker.io/condaforge/mambaforge:latest #force linux arch
 
 # prerequisites
+RUN ln -snf /usr/share/zoneinfo/$(curl https://ipapi.co/timezone) /etc/localtime
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends build-essential && \
     apt-get clean && \
