@@ -19,5 +19,6 @@ RUN mamba env update -n base -f environment.yml
 
 # User creation
 # RUN addgroup --gid 20 vscode
-RUN adduser --disabled-password --gecos '' --uid 502 --gid 20 vscode
-USER vscode
+RUN adduser --disabled-password --gecos '' --uid 502 --gid 20 anurag
+RUN adduser --disabled-password --gecos '' --uid 503 --gid 20 gitpod
+# USER gitpod
