@@ -21,7 +21,3 @@ RUN mamba env update -n base -f environment.yml
 # RUN addgroup --gid 20 vscode
 RUN adduser --disabled-password --gecos '' --uid 502 --gid 20 vscode
 USER vscode
-
-# install dependencies
-COPY environment.yml .
-RUN mamba env create -f environment.yml
