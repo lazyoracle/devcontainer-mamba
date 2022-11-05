@@ -11,6 +11,12 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN dpkg-reconfigure --frontend noninteractive tzdata
+
+# install conda packages from file to base env
+COPY environment.yml .
+RUN mamba env update -n base -f environment.yml
+
 # User creation
 # RUN addgroup --gid 20 vscode
 RUN adduser --disabled-password --gecos '' --uid 502 --gid 20 vscode
