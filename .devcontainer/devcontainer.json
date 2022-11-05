@@ -5,8 +5,7 @@
     "customizations": {
       "vscode": {
         "settings": { 
-				"python.defaultInterpreterPath": "/home/vscode/.conda/envs/test-env/",
-        "terminal.activateEnvironment": true
+          "terminal.integrated.defaultProfile.linux": "fish"
 			},
       "extensions": [
         "donjayamanne.githistory",
