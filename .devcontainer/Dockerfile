@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$(curl https://ipapi.co/timezone) /etc/localtime
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -qq tzdata && \
-    apt-get install -y --no-install-recommends build-essential cmake zsh fish gnupg && \
+    apt-get install -y --no-install-recommends fish wget bzip2 curl git gcc g++ build-essential cmake gnupg vim nano rsync htop tree screen && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
